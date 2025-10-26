@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Tecnologia e Bem-Estar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+  img{
+       display: block;
+        margin: 0 auto;
+        height: 400px;
+        padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="./img/logo.png" alt="Logo" width="40" height="40" class="me-2">
+      Tech & Bem-Estar
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="./blog.html">Acesse nosso blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="./info.html">Apps</a></li>
+        <li class="nav-item"><a class="nav-link" href="./forum.html">Fórum</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <header class="bg-light text-center py-5">
+    <h1>Bem-estar na era digital</h1>
+    <p class="lead">Explore como a tecnologia pode ajudar — ou atrapalhar — sua saúde mental.</p>
+    <a href="https://wa.me/5581999944106" class="btn btn-success">Fale conosco no WhatsApp</a>
+  </header>
+  <img src="./img/post176-tecnologia-bem-estar-912x480.png" alt="">
+  <hr>
+
+  <section id="blog" class="container py-5">
+    <h2>Informações</h2>
+
+    <div class="row">
+        <div class="col-md-4"><div class="card"><div class="card-body"><h5 class="card-title">Tecnologia e Sono</h5><p class="card-text">Como o uso de telas afeta seu descanso.</p><a href="./blog.html"><button type="submit" class="btn btn-primary">Acessar blog</button></a></div></div></div>
+      
+      <div class="col-md-4"><div class="card"><div class="card-body"><h5 class="card-title">Apps de Meditação</h5><p class="card-text">Ferramentas que ajudam a relaxar.</p><a href="./blogApp.html"><button type="submit" class="btn btn-primary">Acessar blog</button></a></div></div></div>
+      
+      <div class="col-md-4"><div class="card"><div class="card-body"><h5 class="card-title">Entrevista com Psicólogo</h5><p class="card-text">Dicas práticas para lidar com o estresse.</p><a href="./blogPsi.html"><button type="submit" class="btn btn-primary">Acessar blog</button></a></div></div></div>
+
+    </div>
+  </section>
+
+  <section id="apps" class="bg-light py-5">
+    <div class="container">
+      <h2>Guia de Apps</h2>
+
+      <ul class="list-group">
+        <li class="list-group-item">Headspace - Meditação</li>
+        <li class="list-group-item">Forest - Foco e produtividade</li>
+        <li class="list-group-item">Moodpath - Diário emocional</li>
+      </ul>
+      <p></p>
+      <a href="./info.html" class="btn btn-outline-primary">Mais informações</a>
+    
+    </div>
+  </section>
+
+  <section id="testes" class="container py-5">
+    <h2>Teste seu nível de estresse</h2>
+    <form id="formEstresse">
+      <div class="mb-3">
+        <label for="pergunta1" class="form-label">Você tem dificuldade para dormir?</label>
+        <select class="form-select" id="pergunta1">
+          <option value="0">Nunca</option>
+          <option value="1">Às vezes</option>
+          <option value="2">Frequentemente</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </section>
+
+  <section id="diario" class="bg-light py-5">
+    <div class="container">
+      <h2>Diário Emocional</h2>
+      <form id="formDiario">
+        <div class="mb-3">
+          <label for="emocao" class="form-label">Como você está se sentindo hoje?</label>
+          <input type="text" class="form-control" id="emocao" placeholder="Triste, animado, ansioso...">
+        </div>
+        <button type="submit" class="btn btn-secondary">Registrar</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="forum" class="container py-5">
+    <h2>Fórum da Comunidade</h2>
+    <p>Participe de discussões sobre bem-estar digital.</p>
+    <a href="./forum.html" class="btn btn-outline-primary">Acessar Fórum</a>
+  </section>
+
+  <section class="container py-5">
+  <h2>Visualização de Emoções</h2>
+  <canvas id="graficoEmocoes" width="400" height="200"></canvas>
+</section>
+
+<section class="container py-5">
+  <h2>Conselho do dia</h2>
+  <div id="conselho" class="alert alert-success">Carregando conselho...</div>
+  <button onclick="buscarConselho()" class="btn btn-outline-success mt-2">Novo conselho</button>
+</section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Tecnologia & Bem-Estar</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+  <script>
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="./index.html">
+      <img src="./img/logo.png" alt="Logo" width="40" height="40" class="me-2">
+      Tech & Bem-Estar
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="./blog.html">Acesse nosso blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="./info.html">Apps</a></li>
+        <li class="nav-item"><a class="nav-link" href="./forum.html">Fórum</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section id="forum" class="container py-5">
+  <h2 class="mb-4">Fórum da Comunidade</h2>
+
+  <div class="card mb-4">
+    <div class="card-header bg-primary text-white">Criar novo tópico</div>
+    <div class="card-body">
+      <form id="novoTopicoForm">
+        <div class="mb-3">
+          <label for="tituloTopico" class="form-label">Título</label>
+          <input type="text" class="form-control" id="tituloTopico" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensagemTopico" class="form-label">Mensagem</label>
+          <textarea class="form-control" id="mensagemTopico" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Publicar</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div id="listaTopicos">
+    <div class="card mb-3">
+      <div class="card-header">
+        <strong>Como a tecnologia afeta meu sono?</strong> <span class="text-muted">por Ana</span>
+      </div>
+      <div class="card-body">
+        <p>Tenho usado o celular antes de dormir e estou com insônia. Alguém mais passa por isso?</p>
+        <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#respostas1">Responder</button>
+
+        <div class="collapse mt-3" id="respostas1">
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Tecnologia & Bem-Estar</p>
+</footer>
+</body>
+</html>
